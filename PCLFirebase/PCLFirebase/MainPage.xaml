@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PCLFirebase.MainPage">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto"/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+    <StackLayout>
+      <Label Text="{Binding AuthResult}"/>
+      <Label Text="{Binding StorageResult}"/>
+    </StackLayout>
+    <ScrollView Grid.Row="1">
+      <StackLayout>
+        <Label FontSize="24" Text="ログイン"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Text="Email"/>
+            <Entry Text="{Binding Email}" Grid.Column="1"/>
+            <Label Text="パスワード" Grid.Row="1"/>
+            <Entry Text="{Binding Password}" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <Button Text="ユーザ新規作成" Command="{Binding CreateUserCommand}"/>
+        <Button Text="ログイン" Command="{Binding SignInCommand}"/>
+      
+        <Label FontSize="24" Text="名前変更"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Text="現在の名前"/>
+            <Label Text="{Binding DisplayName}" Grid.Column="1"/>
+            <Label Text="新しい名前" Grid.Row="1"/>
+            <Entry Text="{Binding NewDisplayName}" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <Button Text="名前変更" Command="{Binding UpdateDisplayNameCommand}"/>
+        
+        <Label FontSize="24" Text="ストレージ"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Text="保存先パス"/>
+            <Entry Text="{Binding TxtPath}" Grid.Column="1"/>
+            <Label Text="保存するテキスト" Grid.Row="1"/>
+            <Entry Text="{Binding StorageSaveText}" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <Button Text="保存" Command="{Binding SaveStorageCommand}"/>
+        <Button Text="読み込み" Command="{Binding LoadStorageCommand}"/>
+      </StackLayout>
+    </ScrollView>
+  </Grid>
+</ContentPage>

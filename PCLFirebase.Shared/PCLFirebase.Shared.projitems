@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>5194e863-701b-4621-81ee-145b0aaeb9bd</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>PCLFirebase.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Firebase\Auth\IFirebaseAuth.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Firebase\Auth\IFirebaseUser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Firebase\Auth\IFirebaseUserInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Firebase\Common\ErrorCodes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Firebase\Config\IFirebaseConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Firebase\Core\FirebaseApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Firebase\Core\IFirebaseApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Firebase\Database\IFirebaseDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Firebase\Storage\IFirebaseStorageReference.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Firebase\Storage\IFirebaseStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\AuthModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\MainModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\StorageModel.cs" />
+  </ItemGroup>
+</Project>
